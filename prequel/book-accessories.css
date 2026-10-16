@@ -1,0 +1,17 @@
+.book-accessories{position:absolute;left:0;top:0;transform-origin:top left;pointer-events:none}
+.book-tabs-layer{z-index:0}
+.book-tabs-layer[data-closed="true"]{z-index:2}
+:is(.book-index-tab,.book-index-tab-turn){position:absolute;left:calc(var(--book-edge) - 7px);top:var(--tab-top);width:var(--tab-width);height:var(--tab-height);margin:0;padding:11px 1px 9px 7px;border:0;border-radius:2px 7px 6px 2px;background-color:var(--tab-paper);background-image:linear-gradient(100deg,#5367800c,transparent 33%,#ffffff26 70%,#53678006),repeating-linear-gradient(0deg,#ffffff0a 0 1px,transparent 1px 3px);box-shadow:1px 2px 3px #4357651c,inset -1px 0 #ffffff55,inset 0 1px #ffffff55;transform:rotate(var(--tab-angle));transform-origin:5px center;color:#647782;font:17px/1.25 "字研室手帐体","Microsoft YaHei",sans-serif;writing-mode:vertical-rl;text-orientation:upright;letter-spacing:3px;display:flex;align-items:center;justify-content:center;pointer-events:auto;transition:filter 140ms ease,translate 140ms ease}
+:is(.book-index-tab,.book-index-tab-turn)::before{content:'';position:absolute;inset:3px 2px 4px 7px;border-right:1px solid #ffffff32;border-radius:0 5px 4px 0;pointer-events:none}
+:is(.book-index-tab,.book-index-tab-turn):disabled{opacity:1;cursor:default}
+:is(.book-index-tab,.book-index-tab-turn)[data-side="left"]{left:calc(7px - var(--tab-width));padding:6px 7px 6px 1px;border-radius:7px 2px 2px 6px;transform:rotate(calc(-1 * var(--tab-angle)));transform-origin:calc(100% - 5px) center}
+.book-index-tab[data-side="left"]:not(:disabled):hover{translate:-2px 0}
+.book-index-tab:not(:disabled){cursor:pointer}
+.book-index-tab:not(:disabled):hover{filter:brightness(1.035);translate:2px 0}
+.book-index-tab[aria-current="location"]{box-shadow:1px 2px 3px #43576524,inset -2px 0 #8296a44a,inset 0 1px #ffffff55}
+:is(.book-index-tab,.book-index-tab-turn){padding-top:6px;padding-bottom:6px;font-size:15px;letter-spacing:1px}
+#book-clip{position:absolute;inset:0;z-index:1;pointer-events:none}
+#book{pointer-events:auto}
+body.single #viewport{overflow:visible;border-radius:0}
+body.single #book-clip{overflow:hidden;border-radius:5px}
+@media(prefers-reduced-motion:reduce){.book-index-tab{transition:none}}

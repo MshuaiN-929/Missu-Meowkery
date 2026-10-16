@@ -1,0 +1,15 @@
+.word-content{position:absolute;top:75px;bottom:60px;left:71px;right:55px}
+.hb-page.left .word-content{left:55px;right:71px}
+.word-content.continued{top:111px}
+.word-flow{display:flow-root;width:100%;font-family:"字研室手帐体","Segoe UI Emoji","Microsoft YaHei",sans-serif;color:#536780}
+.word-paragraph{white-space:pre-wrap;overflow-wrap:anywhere;word-break:normal;margin:0;min-height:1em}
+.word-token{white-space:pre-wrap;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.word-border-group{display:flow-root}
+.word-continuation{position:absolute;top:74px;left:71px;right:55px;text-align:right;font:14px/22px "字研室手帐体",sans-serif;color:#536780}
+.hb-page.left .word-continuation{left:55px;right:71px}
+.word-inspection{position:fixed;left:-10000px;top:0;visibility:hidden}
+.word-measure{position:fixed;left:-10000px;top:0;visibility:hidden;width:374px}
+.word-source-note{font-size:11px;line-height:1.8}
+.hb-cover h1{font-family:"字研室手帐体",sans-serif}
+.word-token:focus-visible{outline:1px dashed #a4b3bd}
+@media(max-width:760px){header span{display:block;margin:3px 0 0}header{align-items:flex-start}.controls{padding-top:10px}}

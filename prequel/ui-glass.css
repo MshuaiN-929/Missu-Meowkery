@@ -1,0 +1,45 @@
+/* Reader controls only; paper, text, book geometry and animations stay unchanged. */
+:root{
+  --ui-glass-surface:rgba(250,251,248,.46);
+  --ui-glass-panel:rgba(248,250,247,.64);
+  --ui-glass-border:rgba(255,255,255,.72);
+  --ui-glass-shadow:0 3px 12px rgba(53,77,93,.07),inset 0 1px 0 rgba(255,255,255,.65);
+}
+.audio-settings>summary,
+.controls select,.controls button,.controls .file-button,
+.navigation button{
+  background:var(--ui-glass-surface);
+  border-color:var(--ui-glass-border);
+  box-shadow:var(--ui-glass-shadow);
+  -webkit-backdrop-filter:blur(12px) saturate(108%);
+  backdrop-filter:blur(12px) saturate(108%);
+}
+.audio-panel{
+  background:var(--ui-glass-panel);
+  border-color:var(--ui-glass-border);
+  box-shadow:0 8px 25px rgba(53,77,93,.12),inset 0 1px 0 rgba(255,255,255,.65);
+  -webkit-backdrop-filter:blur(18px) saturate(108%);
+  backdrop-filter:blur(18px) saturate(108%);
+}
+.audio-panel button,.audio-panel select{
+  background:rgba(255,255,255,.32);
+  border-color:rgba(255,255,255,.76);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.42);
+}
+.page-sound-controls{border-top-color:rgba(112,134,146,.19)}
+.controls select option,.audio-panel select option{
+  background:#f5f6f3;
+  color:var(--ink);
+}
+@media(hover:hover){
+  .audio-settings>summary:hover,
+  .controls select:not(:disabled):hover,.controls button:not(:disabled):hover,
+  .controls .file-button:hover,.navigation button:not(:disabled):hover,
+  .audio-panel button:hover,.audio-panel select:hover{
+    background:rgba(255,255,255,.66);
+  }
+}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  .audio-settings>summary,.controls select,.controls button,.controls .file-button,
+  .navigation button,.audio-panel{background:rgba(248,250,247,.96)}
+}

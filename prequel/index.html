@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN" data-view="reader">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>米酥日记 · 前传全书</title>
+<script>try{if(!JSON.parse(localStorage.getItem('cake-shop-tale-save-v1')||'{}').flags?.mainStoryCompleted)location.replace(new URL('../',location.href));}catch{location.replace(new URL('../',location.href));}</script>
+<script>if(new URLSearchParams(location.search).get('edit')==='1')document.documentElement.dataset.view='editor';</script>
+<link rel="stylesheet" href="runtime/book.css"><link rel="stylesheet" href="runtime/word.css"><link rel="stylesheet" href="runtime/calibration.css"><link rel="stylesheet" href="full.css?v=audiopanel1"><link rel="stylesheet" href="book-accessories.css?v=story6"><link rel="stylesheet" href="ui-glass.css?v=1"><link rel="stylesheet" href="game-return.css"></head>
+<body>
+<header><div>米酥日记 <span>前传 · 2026.5.20—2026.10.16</span></div><div class="header-actions"><a class="game-return" href="../">返回游戏</a>
+<details id="audio-settings" class="audio-settings"><summary aria-controls="audio-panel" aria-expanded="false">声音设置 <i aria-hidden="true"></i></summary>
+<div id="audio-panel" class="audio-panel">
+<div class="bgm-controls" role="group" aria-label="背景音乐">
+<div class="audio-section-head"><strong>背景音乐</strong><button id="bgm-toggle" type="button" aria-pressed="false">BGM：播放</button></div>
+<label class="audio-field" for="bgm-track">曲目<select id="bgm-track" aria-label="选择BGM"></select></label>
+<label class="audio-field" for="bgm-loop">循环<select id="bgm-loop" aria-label="BGM循环方式"><option value="playlist">列表循环</option><option value="single">单曲循环</option></select></label>
+<div class="bgm-volume-controls"><label for="bgm-volume">音量</label><input id="bgm-volume" type="range" min="0" max="100" step="1" value="25" aria-label="BGM音量"><output id="bgm-volume-value" for="bgm-volume">25%</output></div>
+</div>
+<div class="page-sound-controls" role="group" aria-label="翻页声">
+<div class="audio-section-head"><strong>翻页声</strong><button id="sound-toggle" type="button" aria-pressed="true">关闭翻页声</button></div>
+<div class="sfx-volume-controls"><label for="sound-volume">音量</label><input id="sound-volume" type="range" min="0" max="100" step="1" value="55" aria-label="翻页声音量"><output id="sound-volume-value" for="sound-volume">55%</output></div>
+</div>
+<p id="sound-status" hidden role="status"></p><p id="bgm-status" hidden role="status"></p>
+</div></details>
+</div></header>
+<main>
+<div class="controls"><label>阅读 <select id="mode"><option value="spread">双页翻阅</option><option value="single">单页查看</option></select></label><label>跳至 <select id="jump"><option value="-1">封面</option></select></label><button id="regenerate" data-editor-only>检查排版</button><button id="export" data-editor-only>保存排版配置</button><label class="file-button" data-editor-only>载入配置<input id="import" type="file" accept="application/json,.json" hidden></label></div>
+<p id="error" hidden role="alert"></p>
+<audio id="page-turn-audio" preload="auto"></audio>
+<audio id="bgm-audio" preload="metadata"></audio>
+<div id="viewport"><div id="book-clip"><div id="book"></div></div></div>
+<nav class="navigation"><button id="previous" aria-label="上一页">←</button><span id="position"></span><button id="next" aria-label="下一页">→</button></nav>
+<p id="current-note" data-editor-only></p>
+<section class="overview" data-editor-only><h2>全书书页总览</h2><p class="overview-help">点击任意书页可单独查看。</p><div id="thumbnails"></div></section>
+<details class="notes" data-editor-only><summary>导入与排版检查</summary><div id="source-notes"></div><p><a href="date-checklist.md">日期与页码清单</a> · <a href="report.md">全书检查报告</a></p></details>
+</main>
+<script src="runtime/base-config.js"></script><script src="config.js?v=initialaudio1"></script><script src="document.js"></script><script src="runtime/word-renderer.js"></script><script src="runtime/manual-renderer.js?v=dash1"></script><script src="runtime/render-styles.js?v=roundmark1"></script><script src="analyzer.js"></script><script src="automatic-renderer.js"></script><script src="layout-engine.js"></script><script src="book-accessories.config.js?v=story6"></script><script src="book-accessories.js?v=story6"></script><script src="audio-panel.js?v=1"></script><script src="sound.js?v=initialaudio1"></script><script src="bgm.js?v=initialaudio1"></script><script src="reader.js?v=attached1"></script>
+</body></html>
